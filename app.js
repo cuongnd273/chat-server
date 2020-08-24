@@ -5,7 +5,7 @@
  * @modify date 2019-09-02 20:51:10
  * @desc socket.io server !
  */
-
+var port = process.env.PORT || 8080;
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -27,8 +27,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var server = app.listen(80,()=>{
-    console.log('Server is running on port number 3000')
+var server = app.listen(port,()=>{
+    console.log('Server is running on port number '+port)
 })
 
 
